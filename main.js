@@ -352,10 +352,10 @@
 //----------------------------------------------#17-----------------------------------------------------------------
 //Дополни функцию getUserNames(users) так, чтобы она возвращала массив имён пользователей (свойство name) из массива объектов в параметре users.
 
-const getUserNames = (users) => {
-    const usersArray = users.map((user) => user.name);
-    return usersArray;
-};
+// const getUserNames = (users) => {
+//     const usersArray = users.map((user) => user.name);
+//     return usersArray;
+// };
 //-------------------------------------------------------------------------------------------------------------------
 //---------------------------------------------#18-------------------------------------------------------------------
 //Дополни функцию getUserEmails(users) так, чтобы она возвращала массив почтовых адресов пользователей (свойство email) из массива объектов в параметре users.
@@ -438,70 +438,70 @@ const getUserNames = (users) => {
 //----------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------#22(filter())------------------------------------------------------------
 //Дополни функцию getUsersWithEyeColor(users, color) так, чтобы она возвращала массив пользователей у которых цвет глаз (свойство eyeColor) совпадает со значением параметра color.
-const array = [{
-        name: "Moore Hensley",
-        email: "moorehensley@indexia.com",
-        eyeColor: "blue",
-        friends: ["Sharron Pace"],
-        isActive: false,
-        balance: 2811,
-        gender: "male",
-    },
-    {
-        name: "Sharlene Bush",
-        email: "sharlenebush@tubesys.com",
-        eyeColor: "blue",
-        friends: ["Briana Decker", "Sharron Pace"],
-        isActive: true,
-        balance: 3821,
-        gender: "female",
-    },
-    {
-        name: "Ross Vazquez",
-        email: "rossvazquez@xinware.com",
-        eyeColor: "green",
-        friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-        isActive: false,
-        balance: 3793,
-        gender: "male",
-    },
-    {
-        name: "Elma Head",
-        email: "elmahead@omatom.com",
-        eyeColor: "green",
-        friends: ["Goldie Gentry", "Aisha Tran"],
-        isActive: true,
-        balance: 2278,
-        gender: "female",
-    },
-    {
-        name: "Carey Barr",
-        email: "careybarr@nurali.com",
-        eyeColor: "blue",
-        friends: ["Jordan Sampson", "Eddie Strong"],
-        isActive: true,
-        balance: 3951,
-        gender: "male",
-    },
-    {
-        name: "Blackburn Dotson",
-        email: "blackburndotson@furnigeer.com",
-        eyeColor: "brown",
-        friends: ["Jacklyn Lucas", "Linda Chapman"],
-        isActive: false,
-        balance: 1498,
-        gender: "male",
-    },
-    {
-        name: "Sheree Anthony",
-        email: "shereeanthony@kog.com",
-        eyeColor: "brown",
-        friends: ["Goldie Gentry", "Briana Decker"],
-        isActive: true,
-        balance: 2764,
-        gender: "female",
-    },
-];
+// const array = [{
+//         name: "Moore Hensley",
+//         email: "moorehensley@indexia.com",
+//         eyeColor: "blue",
+//         friends: ["Sharron Pace"],
+//         isActive: false,
+//         balance: 2811,
+//         gender: "male",
+//     },
+//     {
+//         name: "Sharlene Bush",
+//         email: "sharlenebush@tubesys.com",
+//         eyeColor: "blue",
+//         friends: ["Briana Decker", "Sharron Pace"],
+//         isActive: true,
+//         balance: 3821,
+//         gender: "female",
+//     },
+//     {
+//         name: "Ross Vazquez",
+//         email: "rossvazquez@xinware.com",
+//         eyeColor: "green",
+//         friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//         isActive: false,
+//         balance: 3793,
+//         gender: "male",
+//     },
+//     {
+//         name: "Elma Head",
+//         email: "elmahead@omatom.com",
+//         eyeColor: "green",
+//         friends: ["Goldie Gentry", "Aisha Tran"],
+//         isActive: true,
+//         balance: 2278,
+//         gender: "female",
+//     },
+//     {
+//         name: "Carey Barr",
+//         email: "careybarr@nurali.com",
+//         eyeColor: "blue",
+//         friends: ["Jordan Sampson", "Eddie Strong"],
+//         isActive: true,
+//         balance: 3951,
+//         gender: "male",
+//     },
+//     {
+//         name: "Blackburn Dotson",
+//         email: "blackburndotson@furnigeer.com",
+//         eyeColor: "brown",
+//         friends: ["Jacklyn Lucas", "Linda Chapman"],
+//         isActive: false,
+//         balance: 1498,
+//         gender: "male",
+//     },
+//     {
+//         name: "Sheree Anthony",
+//         email: "shereeanthony@kog.com",
+//         eyeColor: "brown",
+//         friends: ["Goldie Gentry", "Briana Decker"],
+//         isActive: true,
+//         balance: 2764,
+//         gender: "female",
+//     },
+// ];
 // const getUsersWithEyeColor = (users, color) => {
 //     let usersArray = [];
 //     usersArray = users.filter((user) => user.eyeColor === color);
@@ -509,7 +509,7 @@ const array = [{
 // };
 // console.log(getUsersWithEyeColor(array, "brown"));
 //----------------------------------------------------------------------------------------------------------------------------
-//---------------------------------------------------#23----------------------------------------------------------------------
+//---------------------------------------------------#23(filter())----------------------------------------------------------------------
 //Дополни функцию getUsersWithAge(users, minAge, maxAge) так, чтобы она возвращала массив пользователей, возраст которых (свойство age) попадает в промежуток от minAge до maxAge.
 // const getUsersWithAge = (users, minAge, maxAge) => {
 //   let usersAge = [];
@@ -517,13 +517,87 @@ const array = [{
 //   return usersAge;
 // };
 //----------------------------------------------------------------------------------------------------------------------------
-//-------------------------------------------------#24---------------------------------------------------------------------------
+//-------------------------------------------------#24(filter())---------------------------------------------------------------------------
 // Дополни функцию getUsersWithFriend(users, friendName) так, чтобы она возвращала массив пользователей у которых есть друг с именем в параметре friendName. Массив друзей пользователя хранится в свойстве friends.
-const getUsersWithFriend = (users, friendName) => {
-    let listFriends = [];
-    for (let user in users) {
-        listFriends = users.friends.filter((friend) => friend === friendName);
-    }
-    return listFriends;
-};
-console.log(getUsersWithFriend(array, "Goldie Gentry"));
+// const getUsersWithFriend = (users, friendName) => {
+//     let listFriends = [];
+//---------------------------1method--------------------------------
+// listFriends = users.filter(
+//     (user) => user.friends.includes(friendName) !== false
+// );
+//--------------------------2method----------------------------------
+// for (let user of users) {
+//     if (user.friends.includes(friendName)) {
+//         listFriends.push(user);
+//     }
+// }
+//-------------------------------------------------------------------
+//     return listFriends;
+// };
+// console.log(getUsersWithFriend(array, "Goldie Gentry"));
+//----------------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------#25------------------------------------------------------------------
+// Дополни функцию getFriends(users) так, чтобы она возвращала массив друзей всех пользователей (свойство friends). У нескольких пользователей могут быть одинаковые друзья, сделай так чтобы возвращаемый массив не содержал повторений.
+// const getFriends = (users) => {
+//     let allFriends = [];
+//     allFriends = users.flatMap((user) => user.friends);
+//     allFriends = allFriends.filter(
+//         (friend, index, array) => array.indexOf(friend) === index
+//     );
+
+//     return allFriends;
+// };
+// console.log(getFriends(array));
+//----------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#26-------------------------------------------------------------------
+//Дополни функцию getActiveUsers(users) так, чтобы она возвращала массив активных пользователей, значение свойства isActive которых true.
+// const getActiveUsers = (users) => {
+//     let activeUsers = [];
+//     activeUsers = users.filter((user) => user.isActive === true);
+//     return activeUsers;
+// };
+//----------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#27-------------------------------------------------------------------
+//Дополни функцию getInactiveUsers(users) так, чтобы она возвращала массив неактивных пользователей, значение свойства isActive которых false.
+// const getInactiveUsers = (users) => {
+//   let notActiveUsers = [];
+//   notActiveUsers = users.filter((user) => user.isActive === false);
+//   return notActiveUsers;
+// };
+//----------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#28(find())-------------------------------------------------------------------
+// Используя метод find() дополни код так, чтобы:
+
+// В переменной bookWithTitle получился объект книги название которой (свойство title) совпадает со значением переменной BOOK_TITLE.
+// В переменной bookByAuthor получился объект книги автор который (свойство author) совпадает со значением переменной AUTHOR.
+// const books = [{
+//         title: "The Last Kingdom",
+//         author: "Bernard Cornwell",
+//         rating: 8.38,
+//     },
+//     {
+//         title: "Beside Still Waters",
+//         author: "Robert Sheckley",
+//         rating: 8.51,
+//     },
+//     {
+//         title: "The Dream of a Ridiculous Man",
+//         author: "Fyodor Dostoevsky",
+//         rating: 7.75,
+//     },
+//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+// ];
+// const BOOK_TITLE = "The Dream of a Ridiculous Man";
+// const AUTHOR = "Robert Sheckley";
+// // Change code below this line
+
+// const bookWithTitle = books.find((book) => book.title === BOOK_TITLE);
+// const bookByAuthor = books.find((book) => book.author === AUTHOR);
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#29(find())-------------------------------------------------------------------
+//Дополни функцию getUserWithEmail(users, email) так, чтобы она возвращала объект пользователя, почта которого (свойство email) совпадает со значением параметра email.
+// const getUserWithEmail = (users, email) => {
+//   const user = users.find((user) => user.email === email);
+//   return user;
+// };
+//----------------------------------------------------------------------------------------------------------------------------------
