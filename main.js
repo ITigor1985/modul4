@@ -601,3 +601,78 @@
 //   return user;
 // };
 //----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#30(every())-------------------------------------------------------------------
+// Используя метод every() дополни код так, чтобы:
+
+// В переменной eachElementInFirstIsEven был результат проверки всех элементов массива firstArray на чётность.
+// В переменной eachElementInFirstIsOdd был результат проверки всех элементов массива firstArray на нечётность.
+// В переменной eachElementInSecondIsEven был результат проверки всех элементов массива secondArray на чётность.
+// В переменной eachElementInSecondIsOdd был результат проверки всех элементов массива secondArray на нечётность.
+// В переменной eachElementInThirdIsEven был результат проверки всех элементов массива thirdArray на чётность.
+// В переменной eachElementInThirdIsOdd был результат проверки всех элементов массива thirdArray на нечётность.
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change code below this line
+
+// const eachElementInFirstIsEven = firstArray.every(
+//   (element) => element % 2 === 0
+// );
+// const eachElementInFirstIsOdd = firstArray.every(
+//   (element) => element % 2 !== 0
+// );
+
+// const eachElementInSecondIsEven = secondArray.every(
+//   (element) => element % 2 === 0
+// );
+// const eachElementInSecondIsOdd = secondArray.every(
+//   (element) => element % 2 !== 0
+// );
+
+// const eachElementInThirdIsEven = thirdArray.every(
+//   (element) => element % 2 === 0
+// );
+// const eachElementInThirdIsOdd = thirdArray.every(
+//   (element) => element % 2 !== 0
+// );
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#31(every())-------------------------------------------------------------------
+// Дополни функцию isEveryUserActive(users) так, чтобы она проверяла все ли пользователи сейчас активны (свойство isActive) и возвращала true или false.
+// const isEveryUserActive = (users) => {
+//   return users.every((user) => user.isActive === true);
+// };
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#32(some())-------------------------------------------------------------------
+// Используя метод some() дополни код так, чтобы:
+
+// В переменной anyElementInFirstIsEven был результат проверки наличия чётных элементов в массиве firstArray.
+// В переменной anyElementInFirstIsOdd был результат проверки наличия нечётных элементов в массиве firstArray.
+// В переменной anyElementInSecondIsEven был результат проверки наличия чётных элементов в массиве secondArray.
+// В переменной anyElementInSecondIsOdd был результат проверки наличия нечётных элементов в массиве secondArray.
+// В переменной anyElementInThirdIsEven был результат проверки наличия чётных элементов в массиве thirdArray.
+// В переменной anyElementInThirdIsOdd был результат проверки наличия нечётных элементов в массиве thirdArray.
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change below this line
+
+// const anyElementInFirstIsEven = firstArray.some((element) => element % 2 === 0);
+// const anyElementInFirstIsOdd = firstArray.some((element) => element % 2 !== 0);
+
+// const anyElementInSecondIsEven = secondArray.some(
+//   (element) => element % 2 === 0
+// );
+// const anyElementInSecondIsOdd = secondArray.some(
+//   (element) => element % 2 !== 0
+// );
+
+// const anyElementInThirdIsEven = thirdArray.some((element) => element % 2 === 0);
+// const anyElementInThirdIsOdd = thirdArray.some((element) => element % 2 !== 0);
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#33(some())-------------------------------------------------------------------
+//Дополни функцию isAnyUserActive(users) так, чтобы она проверяла наличие активных пользователей (свойство isActive) и возвращала true или false.
+// const isAnyUserActive = (users) => {
+//   return users.some((user) => user.isActive === true);
+// };
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#34(some())-------------------------------------------------------------------
