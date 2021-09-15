@@ -438,70 +438,70 @@
 //----------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------#22(filter())------------------------------------------------------------
 //Дополни функцию getUsersWithEyeColor(users, color) так, чтобы она возвращала массив пользователей у которых цвет глаз (свойство eyeColor) совпадает со значением параметра color.
-// const array = [{
-//         name: "Moore Hensley",
-//         email: "moorehensley@indexia.com",
-//         eyeColor: "blue",
-//         friends: ["Sharron Pace"],
-//         isActive: false,
-//         balance: 2811,
-//         gender: "male",
-//     },
-//     {
-//         name: "Sharlene Bush",
-//         email: "sharlenebush@tubesys.com",
-//         eyeColor: "blue",
-//         friends: ["Briana Decker", "Sharron Pace"],
-//         isActive: true,
-//         balance: 3821,
-//         gender: "female",
-//     },
-//     {
-//         name: "Ross Vazquez",
-//         email: "rossvazquez@xinware.com",
-//         eyeColor: "green",
-//         friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-//         isActive: false,
-//         balance: 3793,
-//         gender: "male",
-//     },
-//     {
-//         name: "Elma Head",
-//         email: "elmahead@omatom.com",
-//         eyeColor: "green",
-//         friends: ["Goldie Gentry", "Aisha Tran"],
-//         isActive: true,
-//         balance: 2278,
-//         gender: "female",
-//     },
-//     {
-//         name: "Carey Barr",
-//         email: "careybarr@nurali.com",
-//         eyeColor: "blue",
-//         friends: ["Jordan Sampson", "Eddie Strong"],
-//         isActive: true,
-//         balance: 3951,
-//         gender: "male",
-//     },
-//     {
-//         name: "Blackburn Dotson",
-//         email: "blackburndotson@furnigeer.com",
-//         eyeColor: "brown",
-//         friends: ["Jacklyn Lucas", "Linda Chapman"],
-//         isActive: false,
-//         balance: 1498,
-//         gender: "male",
-//     },
-//     {
-//         name: "Sheree Anthony",
-//         email: "shereeanthony@kog.com",
-//         eyeColor: "brown",
-//         friends: ["Goldie Gentry", "Briana Decker"],
-//         isActive: true,
-//         balance: 2764,
-//         gender: "female",
-//     },
-// ];
+const array = [{
+        name: "Moore Hensley",
+        email: "moorehensley@indexia.com",
+        eyeColor: "blue",
+        friends: ["Sharron Pace"],
+        isActive: false,
+        balance: 2811,
+        gender: "male",
+    },
+    {
+        name: "Sharlene Bush",
+        email: "sharlenebush@tubesys.com",
+        eyeColor: "blue",
+        friends: ["Briana Decker", "Sharron Pace"],
+        isActive: true,
+        balance: 3821,
+        gender: "female",
+    },
+    {
+        name: "Ross Vazquez",
+        email: "rossvazquez@xinware.com",
+        eyeColor: "green",
+        friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+        isActive: false,
+        balance: 3793,
+        gender: "male",
+    },
+    {
+        name: "Elma Head",
+        email: "elmahead@omatom.com",
+        eyeColor: "green",
+        friends: ["Goldie Gentry", "Aisha Tran"],
+        isActive: true,
+        balance: 2278,
+        gender: "female",
+    },
+    {
+        name: "Carey Barr",
+        email: "careybarr@nurali.com",
+        eyeColor: "blue",
+        friends: ["Jordan Sampson", "Eddie Strong"],
+        isActive: true,
+        balance: 3951,
+        gender: "male",
+    },
+    {
+        name: "Blackburn Dotson",
+        email: "blackburndotson@furnigeer.com",
+        eyeColor: "brown",
+        friends: ["Jacklyn Lucas", "Linda Chapman"],
+        isActive: false,
+        balance: 1498,
+        gender: "male",
+    },
+    {
+        name: "Sheree Anthony",
+        email: "shereeanthony@kog.com",
+        eyeColor: "brown",
+        friends: ["Goldie Gentry", "Briana Decker"],
+        isActive: true,
+        balance: 2764,
+        gender: "female",
+    },
+];
 // const getUsersWithEyeColor = (users, color) => {
 //     let usersArray = [];
 //     usersArray = users.filter((user) => user.eyeColor === color);
@@ -675,4 +675,185 @@
 //   return users.some((user) => user.isActive === true);
 // };
 //----------------------------------------------------------------------------------------------------------------------------------
-//------------------------------------------------------#34(some())-------------------------------------------------------------------
+//------------------------------------------------------#34(reduce())-------------------------------------------------------------------
+// Игровому сервису необходим функционал подсчёта среднего времени проведённого в играх. Дополни код так, чтобы в переменной totalPlayTime получилось общее игровое время из массива playtimes.
+// const players = {
+//     mango: 1270,
+//     poly: 468,
+//     ajax: 710,
+//     kiwi: 244,
+// };
+// const playtimes = Object.values(players); // [1270, 468, 710, 244]
+// // Change code below this line
+
+// const totalPlayTime = playtimes.reduce((totalTime, time) => {
+//     return totalTime + time;
+// }, 0);
+
+// // Change code above this line
+// const averagePlayTime = totalPlayTime / playtimes.length;
+// console.log(averagePlayTime);
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#35(reduce())-------------------------------------------------------------------
+// Нашему сервису необходимо рассчитать среднее время проведённое в одной игре для каждого игрока, и получить общую сумму этих времён. Рассчитать время для каждого из игроков, можно разделив его время (свойство playtime) на количество игр (свойство gamesPlayed).
+// const players = [
+//     { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//     { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//     { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//     { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+
+// const totalAveragePlaytimePerGame = players.reduce((totalTime, player) => {
+//     return (totalTime += player.playtime / player.gamesPlayed);
+// }, 0);
+// console.log(totalAveragePlaytimePerGame);
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#36(reduce())-------------------------------------------------------------------
+//Дополни функцию calculateTotalBalance(users) так, чтобы она считала и возвращала сумму всех средств (свойство balance) которые хранят пользователи из массива users.
+// const calculateTotalBalance = (users) => {
+//     return users.reduce((totalBalance, user) => {
+//         return totalBalance + user.balance;
+//     }, 0);
+// };
+
+// console.log(calculateTotalBalance(array));
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#37(reduce())-------------------------------------------------------------------
+//Дополни функцию getTotalFriendCount(users) так, чтобы она считала и возвращала общее количество друзей (свойство friends) всех пользователей из массива users.
+// const getTotalFriendCount = (users) => {
+//   return users.reduce((totalFriends, user) => {
+//     return totalFriends + user.friends.length;
+//   }, 0);
+// };
+//console.log(getTotalFriendCount(array));
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#38(sort())-------------------------------------------------------------------
+// Дополни код так, чтобы в переменной ascendingReleaseDates получилась отсортированная по возрастанию копия массива releaseDates, а в переменной alphabeticalAuthors копия массива имён авторов authors отсортированная в по алфавиту.
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//     "Tanith Lee",
+//     "Bernard Cornwell",
+//     "Robert Sheckley",
+//     "Fyodor Dostoevsky",
+// ];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort();
+
+// const alphabeticalAuthors = [...authors].sort();
+// console.log(ascendingReleaseDates);
+// console.log(alphabeticalAuthors);
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#39(sort())-------------------------------------------------------------------
+// Онлайн бибилиотеке необходимо отображать книги сортированные по дате издания, по её возрастанию или убыванию. Дополни код так, чтобы в переменной ascendingReleaseDates получилась отсортированная по возрастанию копия массива releaseDates, а в переменной descendingReleaseDates копия отсортированная по убыванию.
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Change code below this line
+
+// const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+
+// const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);
+// const arr = [...releaseDates];
+// const arr2 = arr.slice(" ");
+// console.log(ascendingReleaseDates); //[1967, 1973, 1984, 1997, 2008, 2012, 2016]
+// console.log(descendingReleaseDates); //[2016, 2012, 2008, 1997, 1984, 1973, 1967]
+// console.log(arr);
+// console.log(arr2);
+// console.log(arr === releaseDates);
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#40(sort())-------------------------------------------------------------------
+// Онлайн бибилиотеке необходимо отображать книги отсортированные по автору, в алфавитном и обратном алфавитном порядке. Дополни код так, чтобы в переменной authorsInAlphabetOrder получилась отсортированная по алфавиту копия массива authors, а в переменной authorsInReversedOrder копия отсортированная в обратном алфавитном порядке.
+// const authors = [
+//     "Tanith Lee",
+//     "Bernard Cornwell",
+//     "Robert Sheckley",
+//     "Fyodor Dostoevsky",
+//     "Howard Lovecraft",
+// ];
+// // Change code below this line
+
+// const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+
+// const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));
+// console.log(authorsInAlphabetOrder);
+// console.log(authorsInReversedOrder);
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#41(sort())-------------------------------------------------------------------
+// Дополни код так, чтобы:
+
+// В переменной sortedByAuthorName получился массив книг отсортированный по имени автора в алфавитном порядке.
+// В переменной sortedByReversedAuthorName получился массив книг отсортированный по имени автора в обратном алфавитном порядке.
+// В переменной sortedByAscendingRating получился массив книг отсортированный по возрастанию рейтинга.
+// В переменной sortedByDescentingRating получился массив книг отсортированный по убыванию рейтинга.
+
+// const books = [{
+//         title: "The Last Kingdom",
+//         author: "Bernard Cornwell",
+//         rating: 8.38,
+//     },
+//     {
+//         title: "Beside Still Waters",
+//         author: "Robert Sheckley",
+//         rating: 8.51,
+//     },
+//     {
+//         title: "The Dream of a Ridiculous Man",
+//         author: "Fyodor Dostoevsky",
+//         rating: 7.75,
+//     },
+//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//     { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
+
+// const sortedByAuthorName = [...books].sort((firstAuthor, secondAuthor) =>
+//     firstAuthor.author.localeCompare(secondAuthor.author)
+// );
+
+// const sortedByReversedAuthorName = [...books].sort(
+//     (firstAuthor, secondAuthor) =>
+//     secondAuthor.author.localeCompare(firstAuthor.author)
+// );
+
+// const sortedByAscendingRating = [...books].sort(
+//     (firstRating, secondRating) => firstRating.rating - secondRating.rating
+// );
+
+// const sortedByDescentingRating = [...books].sort(
+//     (firstRating, secondRating) => secondRating.rating - firstRating.rating
+// );
+// console.log(sortedByAuthorName);
+// console.log(sortedByReversedAuthorName);
+// console.log(sortedByAscendingRating);
+// console.log(sortedByDescentingRating);
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#42(sort())-------------------------------------------------------------------
+//Дополни функцию sortByAscendingBalance(users) так, чтобы она возвращала массив пользователей отсортированный по возрастанию их баланса (свойство balance).
+// const sortByAscendingBalance = (users) => {
+//     return [...users].sort(
+//         (firstBalance, secondBalance) =>
+//         firstBalance.balance - secondBalance.balance
+//     );
+// };
+// console.table(sortByAscendingBalance(array));
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#43(sort())-------------------------------------------------------------------
+//Дополни функцию sortByDescendingFriendCount(users) так, чтобы она возвращала массив пользователей отсортированный по убыванию количества их друзей (свойство friends).
+// const sortByDescendingFriendCount = (users) => {
+//     return [...users].sort(
+//         (firstBalance, secondBalance) =>
+//         secondBalance.friends.length - firstBalance.friends.length
+//     );
+// };
+// console.table(sortByDescendingFriendCount(array));
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#44(sort())-------------------------------------------------------------------
+//Дополни функцию sortByName(users) так, чтобы она возвращала массив пользователей отсортированный по их имени (свойство name) в алфавитном порядке.
+// const sortByName = (users) => {
+//     return [...users].sort((firstName, secondName) =>
+//         firstName.name.localeCompare(secondName.name)
+//     );
+// };
+// console.table(sortByName(array));
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#45(sort())-------------------------------------------------------------------
