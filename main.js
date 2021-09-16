@@ -856,4 +856,65 @@ const array = [{
 // };
 // console.table(sortByName(array));
 //----------------------------------------------------------------------------------------------------------------------------------
-//------------------------------------------------------#45(sort())-------------------------------------------------------------------
+//------------------------------------------------------#45()-------------------------------------------------------------------
+//Дополни код так, чтобы в переменной names получился массив имён авторов в алфавитном порядке, рейтинг книг которых больше значения переменной MIN_BOOK_RATING.
+// const books = [{
+//         title: "The Last Kingdom",
+//         author: "Bernard Cornwell",
+//         rating: 8.38,
+//     },
+//     {
+//         title: "Beside Still Waters",
+//         author: "Robert Sheckley",
+//         rating: 8.51,
+//     },
+//     {
+//         title: "The Dream of a Ridiculous Man",
+//         author: "Fyodor Dostoevsky",
+//         rating: 7.75,
+//     },
+//     { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//     {
+//         title: "The Dreams in the Witch House",
+//         author: "Howard Lovecraft",
+//         rating: 8.67,
+//     },
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
+
+// const names = [...books]
+//     .filter((book) => book.rating > MIN_BOOK_RATING)
+//     .map((book) => book.author)
+//     .sort((a, b) => a.localeCompare(b));
+// console.log(names);
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#46-------------------------------------------------------------------
+//Дополни функцию getNamesSortedByFriendCount(users) так, чтобы она возвращала массив имён пользователей отсортированный по возрастанию количества их друзей (свойство friends).
+// const getNamesSortedByFriendCount = (users) => {
+//     return [...users]
+//         .sort((a, b) => a.friends.length - b.friends.length)
+//         .map((user) => user.name);
+// };
+// console.log(getNamesSortedByFriendCount(array));
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#47-------------------------------------------------------------------
+//Дополни функцию getSortedFriends(users) так, чтобы она возвращала массив уникальных имён друзей (свойство friends) отсортированный по алфавиту .
+// const getSortedFriends = (users) => {
+//     return users
+//         .flatMap((user) => user.friends)
+//         .filter((friend, index, array) => array.indexOf(friend) === index)
+//         .sort((a, b) => a.localeCompare(b));
+// };
+// console.log(getSortedFriends(array));
+//----------------------------------------------------------------------------------------------------------------------------------
+//------------------------------------------------------#48-------------------------------------------------------------------
+//Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий баланс пользователей (свойство balance), пол которых (свойство gender) совпадает со значением параметра gender.
+// const getTotalBalanceByGender = (users, gender) => {
+//     return users
+//         .filter((user) => user.gender === gender)
+//         .reduce((totalBalance, user) => {
+//             return totalBalance + user.balance;
+//         }, 0);
+// };
+// console.log(getTotalBalanceByGender(array, "male"));
